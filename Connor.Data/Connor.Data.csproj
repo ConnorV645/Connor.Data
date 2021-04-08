@@ -2,10 +2,24 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <!-- For NuGet -->
+    <PackageId>Connor.Data</PackageId>
+    <Version>5.0.0</Version>
+    <Authors>Connor Vargas</Authors>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/ConnorV645/Connor.Data</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/ConnorV645/Connor.Data</PackageProjectUrl>
+    <PackageIcon>icon1.png</PackageIcon>
+    <Description>Provides a quick EF Core data repository outline</Description>
+    <AssemblyVersion>5.0.0.0</AssemblyVersion>
+    <FileVersion>5.0.0.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.5" />
+    <None Include="icon1.png" Pack="true" PackagePath=""/>
   </ItemGroup>
 
 </Project>
