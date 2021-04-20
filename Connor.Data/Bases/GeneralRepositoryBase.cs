@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
@@ -9,7 +10,7 @@ namespace Connor.Data.Bases
         protected static async Task AddOrUpdateBase<T>(B context, DbSet<T> set, T obj, string pkField) where T : class
         {
             var pkValue = obj.GetType().GetProperty(pkField).GetValue(obj, null);
-            if (pkValue.Equals(0L) || pkValue.Equals(0))
+            if (Convert.ToInt64(pkValue).Equals(0L))
             {
                 set.Add(obj);
             }
